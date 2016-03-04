@@ -9,8 +9,8 @@ if (session_id() == "") {
 //include db;
 $redBean = dirname(__FILE__) . '/assets/rb.php';
 require_once $redBean;
-// R::setup('mysql:host=mysql.hostinger.com.hk;dbname=u502190727_sby', 'u502190727_sby', 'wrx52sby');
-R::setup('mysql:host=localhost;dbname=wangrunxin', 'wangrunxin', 'wrx52691000');
+R::setup('mysql:host=mysql.hostinger.com.hk;dbname=u502190727_sby', 'u502190727_sby', 'wrx52sby');
+// R::setup('mysql:host=localhost;dbname=wangrunxin', 'wangrunxin', 'wrx52691000');
 
 //include visitor;
 $visitor = dirname(__FILE__) . '/visitor_helper.php';
