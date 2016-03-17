@@ -121,7 +121,7 @@ Yii::app ()->assets->registerScript ( "frame.layout/js/custom.js" );
 				<div class="span4 offset1">
 					<div>
 						<h2>
-							I live with <strong>creativity</strong>
+							I live with <strong>WANG Runxin</strong>
 						</h2>
 						<p>what should I say here?</p>
 					</div>
