@@ -1,13 +1,10 @@
 <?php
-$system = wrx_model_system_basic::load();
-if (time() - $system->
-	getValue('s_last_back_up_db') > 3600 * 24 * 7) {
+$system = wrx_model_system_basic::load ();
+if (time () - $system->getValue ( 's_last_back_up_db' ) > 3600 * 24 * 7) {
 	echo '
 <div class="alert alert-danger"> <strong>注意!</strong>
 	您已经超过7天没有备份数据库了，请及时备份.
-	<a href="' . Yii::app()->
-		assets->getUrlPath('backend/backup')
-		. '">【进入数据库管理】
+	<a href="' . Yii::app ()->assets->getUrlPath ( 'backend/backup' ) . '">【进入数据库管理】
 	</a>
 </div>
 ';
@@ -28,7 +25,8 @@ if (time() - $system->
 
 		<div class="dashboard-stat green-haze">
 
-			<div class="visual"> <i class="fa fa-group fa-icon-medium"></i>
+			<div class="visual">
+				<i class="fa fa-group fa-icon-medium"></i>
 
 			</div>
 
@@ -41,7 +39,7 @@ if (time() - $system->
 
 			</div>
 
-			<a class="more" onclick="javascript:reLoad(id);" id ="order_list">
+			<a class="more" onclick="javascript:reLoad(id);" id="order_list">
 				用户管理 <i class="m-icon-swapright m-icon-white"></i>
 
 			</a>
@@ -69,11 +67,12 @@ if (time() - $system->
 
 			</div>
 
-			<a class="more" href="<?php echo Yii::app()->
-	assets->getUrlPath("backend/messagelist"); ?>" id ="car_list">
-
-				信息管理
-				<i class="m-icon-swapright m-icon-white"></i>
+			<a class="more"
+				href="<?php
+				
+echo Yii::app ()->assets->getUrlPath ( "backend/messagelist" );
+				?>"
+				id="car_list"> 信息管理 <i class="m-icon-swapright m-icon-white"></i>
 
 			</a>
 
@@ -114,13 +113,11 @@ if (time() - $system->
 
 <div class="alert alert-info">
 
-	<label style="font-size:18px">系统模块</label>
-
-	<br>
+	<label style="font-size: 18px">系统模块</label> <br>
 
 	<div class="tiles">
 
-<!-- 		<div class="tile bg-blue-steel" onclick="javascript:reLoad(id);" id ="schedule_list">
+		<!-- 		<div class="tile bg-blue-steel" onclick="javascript:reLoad(id);" id ="schedule_list">
 
 			<div class="tile-body">
 
@@ -138,7 +135,8 @@ if (time() - $system->
 
 		</div> -->
 
-		<div class="tile bg-green" onclick="javascript:reLoad(id);" id ="order_list">
+		<div class="tile bg-green" onclick="javascript:reLoad(id);"
+			id="order_list">
 
 			<div class="tile-body">
 

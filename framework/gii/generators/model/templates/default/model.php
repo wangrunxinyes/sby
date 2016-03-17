@@ -24,29 +24,28 @@
  * The followings are the available model relations:
 <?php foreach($relations as $name=>$relation): ?>
  * @property <?php
-	if (preg_match("~^array\(self::([^,]+), '([^']+)', '([^']+)'\)$~", $relation, $matches))
-    {
-        $relationType = $matches[1];
-        $relationModel = $matches[2];
-
-        switch($relationType){
-            case 'HAS_ONE':
-                echo $relationModel.' $'.$name."\n";
-            break;
-            case 'BELONGS_TO':
-                echo $relationModel.' $'.$name."\n";
-            break;
-            case 'HAS_MANY':
-                echo $relationModel.'[] $'.$name."\n";
-            break;
-            case 'MANY_MANY':
-                echo $relationModel.'[] $'.$name."\n";
-            break;
-            default:
-                echo 'mixed $'.$name."\n";
-        }
-	}
-    ?>
+		if (preg_match ( "~^array\(self::([^,]+), '([^']+)', '([^']+)'\)$~", $relation, $matches )) {
+			$relationType = $matches [1];
+			$relationModel = $matches [2];
+			
+			switch ($relationType) {
+				case 'HAS_ONE' :
+					echo $relationModel . ' $' . $name . "\n";
+					break;
+				case 'BELONGS_TO' :
+					echo $relationModel . ' $' . $name . "\n";
+					break;
+				case 'HAS_MANY' :
+					echo $relationModel . '[] $' . $name . "\n";
+					break;
+				case 'MANY_MANY' :
+					echo $relationModel . '[] $' . $name . "\n";
+					break;
+				default :
+					echo 'mixed $' . $name . "\n";
+			}
+		}
+		?>
 <?php endforeach; ?>
 <?php endif; ?>
  */
@@ -122,14 +121,10 @@ class <?php echo $modelClass; ?> extends <?php echo $this->baseClass."\n"; ?>
 		$criteria=new CDbCriteria;
 
 <?php
-foreach($columns as $name=>$column)
-{
-	if($column->type==='string')
-	{
+foreach ( $columns as $name => $column ) {
+	if ($column->type === 'string') {
 		echo "\t\t\$criteria->compare('$name',\$this->$name,true);\n";
-	}
-	else
-	{
+	} else {
 		echo "\t\t\$criteria->compare('$name',\$this->$name);\n";
 	}
 }

@@ -1,3 +1,5 @@
-<?php $image = new captcha();
-$image->show();
+<?php
+
+$image = new captcha ();
+$image->show ();
 ?>

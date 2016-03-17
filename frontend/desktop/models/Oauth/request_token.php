@@ -1,5 +1,4 @@
 <?php
-
-print_r(Yii::app()->oauth->requestToken());
+print_r ( Yii::app ()->oauth->requestToken () );
 
 ?>

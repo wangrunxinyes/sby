@@ -1,80 +1,67 @@
 <?php
 class Sitecontroller extends Controller {
-
 	public $layout = 'clean';
-
 	public function actions() {
-
-		return array(
-
-			// captcha action renders the CAPTCHA image displayed on the contact page
-
-			'captcha' => array(
-
-				'class' => 'CCaptchaAction',
-
-				'backColor' => 0xFFFFFF,
-
-			),
-
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-
-			// They can be accessed via: index.php?r=site/page&view=FileName
-
-			'page' => array(
-
-				'class' => 'CViewAction',
-
-			),
-
-		);
-
+		return array (
+				
+				// captcha action renders the CAPTCHA image displayed on the contact page
+				
+				'captcha' => array (
+						
+						'class' => 'CCaptchaAction',
+						
+						'backColor' => 0xFFFFFF 
+				)
+				,
+				
+				// page action renders "static" pages stored under 'protected/views/site/pages'
+				
+				// They can be accessed via: index.php?r=site/page&view=FileName
+				
+				'page' => array (
+						
+						'class' => 'CViewAction' 
+				)
+				 
+		)
+		;
 	}
-
 	public function actionCode() {
-		$this->renderPartial('code');
+		$this->renderPartial ( 'code' );
 	}
-
-	public function actionMiu(){
+	public function actionMiu() {
 		$this->layout = "clean";
-		$this->render('miumiu');
+		$this->render ( 'miumiu' );
 	}
-
-
-	public function actionCall(){
+	public function actionCall() {
 		$this->layout = "clean";
-		$this->render('call');
+		$this->render ( 'call' );
 	}
-
 	public function actionIndex() {
 		$this->layout = "clean";
-		$this->render('index');
+		$this->render ( 'index' );
 	}
-
 	public function actionAbout() {
 		$this->layout = "clean";
-		$this->render('about');
+		$this->render ( 'about' );
 	}
-
 	public function actionError() {
-		if ($error = Yii::app()->errorHandler->error) {
-			if (Yii::app()->request->isAjaxRequest) {
-				echo json_encode($error);
+		if ($error = Yii::app ()->errorHandler->error) {
+			if (Yii::app ()->request->isAjaxRequest) {
+				echo json_encode ( $error );
 			} else {
 				$this->layout = "clean";
-				$this->render('error', $error);
+				$this->render ( 'error', $error );
 			}
 		}
 	}
-
 	public function actionLogin() {
 		$this->layout = "clean";
-		$this->render('login');
+		$this->render ( 'login' );
 	}
-
 	public function actionAjax() {
 		$this->layout = "clean";
-		$this->render('ajax');
+		$this->render ( 'ajax' );
 	}
 }
 

@@ -2,16 +2,27 @@
 	font-weight: normal;
 	font-style: normal;
 	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix')
+		format('embedded-opentype'),
 		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
 		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons')
+		format('svg');
 }
 
-*, *:after, *:before { box-sizing: border-box; }
-.clearfix:before, .clearfix:after {display: table;  content: ''; }
-.clearfix:after { clear: both; }
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: '';
+}
+
+.clearfix:after {
+	clear: both;
+}
 
 a {
 	outline: none;
@@ -23,9 +34,9 @@ a:hover {
 	color: #1e1a1b;
 }
 
- a:focus {
- 	outline: none;
- }
+a:focus {
+	outline: none;
+}
 
 .hidden {
 	height: 0;
@@ -53,9 +64,9 @@ a:hover {
 	background: url(../img/mouse.svg) no-repeat left 50% bottom 40px;
 }
 
-.codrops-header::before,
-.codrops-header::after {
-	content: 'Lorizzleipsizzledolorcrazy amizzlefoshizzleizzleelit Nullizzlesapienvelizzle aliquetvolutpatfoshizzlefo shizzlemynizzlegravidafoshizzle Lorizzleipsizzledolorcrazy amizzlefoshizzleizzleelit Nullizzlesapienvelizzle aliquetvolutpatfoshizzlefo shizzlemynizzlegravidafoshizzle';
+.codrops-header::before, .codrops-header::after {
+	content:
+		'Lorizzleipsizzledolorcrazy amizzlefoshizzleizzleelit Nullizzlesapienvelizzle aliquetvolutpatfoshizzlefo shizzlemynizzlegravidafoshizzle Lorizzleipsizzledolorcrazy amizzlefoshizzleizzleelit Nullizzlesapienvelizzle aliquetvolutpatfoshizzlefo shizzlemynizzlegravidafoshizzle';
 	font-size: 13em;
 	line-height: 0.5;
 	letter-spacing: -15px;
@@ -64,7 +75,7 @@ a:hover {
 	pointer-events: none;
 	position: absolute;
 	background: #cdced2;
-	color: rgba(255,255,255,0.15);
+	color: rgba(255, 255, 255, 0.15);
 	font-family: 'Playfair Display', cursive;
 	font-weight: 900;
 	font-style: italic;
@@ -118,8 +129,8 @@ a:hover {
 	height: 100%;
 	background: #fff;
 	content: '';
-	-webkit-transform: rotate3d(0,0,1,22.5deg);
-	transform: rotate3d(0,0,1,22.5deg);
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
 }
 
 .codrops-icon {
@@ -140,7 +151,6 @@ a:hover {
 	font-variant: normal;
 	font-family: 'codropsicons';
 	line-height: 1;
-
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }
@@ -168,7 +178,8 @@ a:hover {
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
-	-webkit-transform: translate3d(0,0,0); /* Solves Safari bug because of SVG clipping mask */
+	-webkit-transform: translate3d(0, 0, 0);
+	/* Solves Safari bug because of SVG clipping mask */
 }
 
 .grid__item p {
@@ -178,16 +189,45 @@ a:hover {
 }
 
 /* Background colors */
-.color-1 { background: #E8E0DA; }
-.color-2 { background: #576b67; }
-.color-3 { background: #383A35; }
-.color-4 { background: #333; }
-.color-5 { background: #fda9a9; }
-.color-7 { background: #cde7d3; }
-.color-8 { background: #DCECDD; }
-.color-9 { background: #dedbba; }
-.color-10 { background: #222; }
-.color-11 { background: #515151; }
+.color-1 {
+	background: #E8E0DA;
+}
+
+.color-2 {
+	background: #576b67;
+}
+
+.color-3 {
+	background: #383A35;
+}
+
+.color-4 {
+	background: #333;
+}
+
+.color-5 {
+	background: #fda9a9;
+}
+
+.color-7 {
+	background: #cde7d3;
+}
+
+.color-8 {
+	background: #DCECDD;
+}
+
+.color-9 {
+	background: #dedbba;
+}
+
+.color-10 {
+	background: #222;
+}
+
+.color-11 {
+	background: #515151;
+}
 
 /* Related demos */
 .content--related {
@@ -211,8 +251,7 @@ a:hover {
 	transition: opacity 0.3s;
 }
 
-.media-item:hover .media-item__img,
-.media-item:focus .media-item__img {
+.media-item:hover .media-item__img, .media-item:focus .media-item__img {
 	opacity: 1;
 }
 
@@ -237,10 +276,10 @@ a:hover {
 	}
 }
 
-h1{
+h1 {
 	text-align: center;
 }
 
-.contact-container{
+.contact-container {
 	width: 100%;
 }

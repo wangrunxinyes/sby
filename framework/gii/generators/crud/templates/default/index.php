@@ -9,7 +9,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 <?php
-$label=$this->pluralize($this->class2name($this->modelClass));
+$label = $this->pluralize ( $this->class2name ( $this->modelClass ) );
 echo "\$this->breadcrumbs=array(
 	'$label',
 );\n";

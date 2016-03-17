@@ -8,19 +8,23 @@
 ?>
 <div class="form">
 
-<?php echo "<?php \$form=\$this->beginWidget('CActiveForm', array(
-	'id'=>'".$this->class2id($modelClass)."-form',
-	'enableAjaxValidation'=>false,
-)); ?>\n"; ?>
+<?php
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+echo "<?php \$form=\$this->beginWidget('CActiveForm', array(
+	'id'=>'" . $this->class2id ( $modelClass ) . "-form',
+	'enableAjaxValidation'=>false,
+)); ?>\n";
+?>
+
+	<p class="note">
+		Fields with <span class="required">*</span> are required.
+	</p>
 
 	<?php echo "<?php echo \$form->errorSummary(\$model); ?>\n"; ?>
 
 <?php
-foreach($attributes as $attribute)
-{
-?>
+foreach ( $attributes as $attribute ) {
+	?>
 	<div class="row">
 		<?php echo "<?php echo \$form->labelEx(\$model,'$attribute'); ?>\n"; ?>
 		<?php echo "<?php echo \$form->textField(\$model,'$attribute'); ?>\n"; ?>
@@ -36,4 +40,5 @@ foreach($attributes as $attribute)
 
 <?php echo "<?php \$this->endWidget(); ?>\n"; ?>
 
-</div><!-- form -->
+</div>
+<!-- form -->

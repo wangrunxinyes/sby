@@ -4,13 +4,11 @@
  *
  */
 class ScanHelper {
-
 	function __construct() {
-		# code...
+		// code...
 	}
-
 	public static function scan($dir) {
-		$file = scandir($dir);
+		$file = scandir ( $dir );
 		return $file;
 	}
 }

@@ -8,9 +8,10 @@
  */
 ?>
 <?php
+
 echo "<?php\n";
-$nameColumn=$this->guessNameColumn($columns);
-$label=$this->class2name($modelClass,true);
+$nameColumn = $this->guessNameColumn ( $columns );
+$label = $this->class2name ( $modelClass, true );
 echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
 	\$model->{$nameColumn}=>array('view','id'=>\$model->{$ID}),

@@ -9,8 +9,8 @@
 /* @var $model <?php echo $this->getModelClass(); ?> */
 
 <?php
-$nameColumn=$this->guessNameColumn($this->tableSchema->columns);
-$label=$this->pluralize($this->class2name($this->modelClass));
+$nameColumn = $this->guessNameColumn ( $this->tableSchema->columns );
+$label = $this->pluralize ( $this->class2name ( $this->modelClass ) );
 echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
 	\$model->{$nameColumn},
@@ -32,8 +32,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 <?php
-foreach($this->tableSchema->columns as $column)
-	echo "\t\t'".$column->name."',\n";
+foreach ( $this->tableSchema->columns as $column )
+	echo "\t\t'" . $column->name . "',\n";
 ?>
 	),
 )); ?>

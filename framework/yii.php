@@ -9,8 +9,7 @@
  * @package system
  * @since 1.0
  */
-
-require(dirname(__FILE__).'/YiiBase.php');
+require (dirname ( __FILE__ ) . '/YiiBase.php');
 
 /**
  * Yii is a helper class serving common framework functionalities.
@@ -22,6 +21,5 @@ require(dirname(__FILE__).'/YiiBase.php');
  * @package system
  * @since 1.0
  */
-class Yii extends YiiBase
-{
+class Yii extends YiiBase {
 }

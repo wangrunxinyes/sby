@@ -8,4 +8,5 @@
 	<?php echo CHtml::submitButton('Enter'); ?>
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+</div>
+<!-- form -->

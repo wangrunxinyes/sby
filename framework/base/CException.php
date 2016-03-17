@@ -15,7 +15,6 @@
  * @package system.base
  * @since 1.0
  */
-class CException extends Exception
-{
+class CException extends Exception {
 }
 

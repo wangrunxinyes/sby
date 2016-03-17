@@ -8,9 +8,10 @@
  */
 ?>
 <?php
+
 echo "<?php\n";
-$nameColumn=$this->guessNameColumn($columns);
-$label=$this->class2name($modelClass,true);
+$nameColumn = $this->guessNameColumn ( $columns );
+$label = $this->class2name ( $modelClass, true );
 echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
 	\$model->{$nameColumn},
@@ -32,8 +33,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 <?php
-foreach($columns as $column)
-	echo "\t\t'".$column->name."',\n";
+foreach ( $columns as $column )
+	echo "\t\t'" . $column->name . "',\n";
 ?>
 	),
 )); ?>

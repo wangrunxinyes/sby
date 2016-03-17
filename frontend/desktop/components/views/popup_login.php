@@ -1,54 +1,27 @@
 <?php
 
+// include css
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->baseUrl . "/assets/frame.layout/css/popup.reset.css" );
 
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->baseUrl . "/assets/frame.layout/css/popup.style.css" );
 
-//include css
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->baseUrl . "/assets/extensions/login.frame/css/style.css" );
 
+// include js;
 
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/global.style/js/jquery.min.js" );
 
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . "/assets/frame.layout/css/popup.reset.css");
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/global.style/js/jquery.cookie.js" );
 
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/custom.files/js/md5.js" );
 
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/extensions/login.frame/js/login.js" );
 
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . "/assets/frame.layout/css/popup.style.css");
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/frame.layout/js/popup.modernizr.js" );
 
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/extensions/login.frame/js/ChunkFive_400.font.js" );
 
-
-Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . "/assets/extensions/login.frame/css/style.css");
-
-
-
-//include js;
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/global.style/js/jquery.min.js");
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/global.style/js/jquery.cookie.js");
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/custom.files/js/md5.js");
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/extensions/login.frame/js/login.js");
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/frame.layout/js/popup.modernizr.js");
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/extensions/login.frame/js/ChunkFive_400.font.js");
-
-
-
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/extensions/login.frame/js/cufon-yui.js");
-
-
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->baseUrl . "/assets/extensions/login.frame/js/cufon-yui.js" );
 
 ?>
 
@@ -58,199 +31,32 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-<div class="cd-popup-container" style="box-shadow: 0px 0px 0px; background-color: transparent; max-width:60%; width:60%; max-height:50%; height:50%; boder:none;">
+	<div class="cd-popup-container"
+		style="box-shadow: 0px 0px 0px; background-color: transparent; max-width: 60%; width: 60%; max-height: 50%; height: 50%; boder: none;">
 
 
 
-	<div class="content">
+		<div class="content">
 
 
 
-				<div id="form_wrapper" class="form_wrapper">
+			<div id="form_wrapper" class="form_wrapper">
 
-				<a href="#0" id='wrx_login_form_bt' rel="login" class="linkform" style="display:none">Close</a>
+				<a href="#0" id='wrx_login_form_bt' rel="login" class="linkform"
+					style="display: none">Close</a> <a class="cd-modal-close"
+					id='wrx_close_form_bt'></a>
 
-				<a class="cd-modal-close" id='wrx_close_form_bt' ></a>
 
 
+				<form class="register">
 
-					<form class="register">
 
 
+					<h3>注册</h3>
 
-						<h3>注册</h3>
 
 
-
-						<div class="column">
-
-
-
-							<div>
-
-
-
-								<label>姓氏</label>
-
-
-
-								<input type="text" />
-
-
-
-								<span class="error">This is an error</span>
-
-
-
-							</div>
-
-
-
-							<div>
-
-
-
-								<label>名字</label>
-
-
-
-								<input type="text" />
-
-
-
-								<span class="error">This is an error</span>
-
-
-
-							</div>
-
-
-
-							<div>
-
-
-
-								<label>地址</label>
-
-
-
-								<input type="text" value=""/>
-
-
-
-								<span class="error">This is an error</span>
-
-
-
-							</div>
-
-
-
-						</div>
-
-
-
-						<div class="column">
-
-
-
-							<div>
-
-
-
-								<label>用户名</label>
-
-
-
-								<input type="text"/>
-
-
-
-								<span class="error">This is an error</span>
-
-
-
-							</div>
-
-
-
-							<div>
-
-
-
-								<label>电子邮件</label>
-
-
-
-								<input type="text" />
-
-
-
-								<span class="error">This is an error</span>
-
-
-
-							</div>
-
-
-
-							<div>
-
-
-
-								<label>密码</label>
-
-
-
-								<input type="password" />
-
-
-
-								<span class="error">This is an error</span>
-
-
-
-							</div>
-
-
-
-						</div>
-
-
-
-						<div class="bottom">
-
-
-
-							<input type="submit" value="注册" />
-
-
-
-							<a href="index.html" rel="login" class="linkform">已经有账户？点击这里登录</a>
-
-
-
-							<div class="clear"></div>
-
-
-
-						</div>
-
-
-
-					</form>
-
-
-
-					<form class="login active">
-
-
-
-						<h3>登录</h3>
-
-
-
-						<div><a href="#0" id='wrx_login_close_bt' class="cd-login-close img-replace">Close</a></div>
+					<div class="column">
 
 
 
@@ -258,11 +64,8 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-							<input type="text" id="wrx_username" PlaceHolder="用户名"/>
-
-
-
-							<span class="error">This is an error</span>
+							<label>姓氏</label> <input type="text" /> <span class="error">This
+								is an error</span>
 
 
 
@@ -274,117 +77,12 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-							<input type="password" id="wrx_password" PlaceHolder="登录密码"/>
-
-
-
-							<span class="error">This is an error</span>
-
-
-
-						</div>
-
-
-
-						<div id="wrx_hidden_code" style="display:none;">
-
-
-
-						    <img id="wrx_code_img" class="wrx_code_popup">
-
-
-
-							<input type="text" id="wrx_code" PlaceHolder="验证码"/>
-
-
-
-							<span class="error">This is an error</span>
+							<label>名字</label> <input type="text" /> <span class="error">This
+								is an error</span>
 
 
 
 						</div>
-
-
-
-						<div style="margin-top: -15px;">
-
-						    <label id="info" style="display:none;"></label>
-
-							<a href="#" rel="forgot_password" class="linkform">忘记密码?</a>
-
-						</div>
-
-
-
-						<div class="bottom">
-
-
-
-							<input type="submit" class="wrx_login_bt" readonly="true" value="登录" />
-
-
-
-							<input id="wrx_login_bt" type="hidden" rel="process" class="linkform">
-
-
-
-							<input type="cancel" readonly="true" class="cd-popup-close wrx_popup_close" value="取消" />
-
-
-
-							<a href="#" rel="register" class="linkform">还没有账户？快速注册</a>
-
-
-
-							<div class="clear"></div>
-
-
-
-						</div>
-
-
-
-					</form>
-
-
-
-					<form class="process">
-
-
-
-					    <div ng-spinner-bar class='page-spinner-bar'>
-
-
-
-					        <div class='bounce1'></div>
-
-
-
-					        <div class='bounce2'></div>
-
-
-
-					        <div class='bounce3'></div>
-
-
-
-					        <p class='process-info' id="wrx_process_info">登录中，请稍后</p>
-
-
-
-					    </div><!-- END PAGE SPINNER -->
-
-
-
-					</form>
-
-
-
-					<form class="forgot_password">
-
-
-
-						<h3>忘记密码</h3>
 
 
 
@@ -392,15 +90,8 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-							<label>请输入用户名或邮箱</label>
-
-
-
-							<input type="text" />
-
-
-
-							<span class="error">This is an error</span>
+							<label>地址</label> <input type="text" value="" /> <span
+								class="error">This is an error</span>
 
 
 
@@ -408,23 +99,20 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-						<div class="bottom">
+					</div>
 
 
 
-							<input type="submit" value="找回密码" />
+					<div class="column">
 
 
 
-							<a href="index.html" rel="login" class="linkform">返回登录</a>
+						<div>
 
 
 
-							<a href="register.html" rel="register" class="linkform">还没有账户？点击注册</a>
-
-
-
-							<div class="clear"></div>
+							<label>用户名</label> <input type="text" /> <span class="error">This
+								is an error</span>
 
 
 
@@ -432,15 +120,221 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-					</form>
+						<div>
 
 
 
-				</div>
+							<label>电子邮件</label> <input type="text" /> <span class="error">This
+								is an error</span>
 
 
 
-				<div class="clear"></div>
+						</div>
+
+
+
+						<div>
+
+
+
+							<label>密码</label> <input type="password" /> <span class="error">This
+								is an error</span>
+
+
+
+						</div>
+
+
+
+					</div>
+
+
+
+					<div class="bottom">
+
+
+
+						<input type="submit" value="注册" /> <a href="index.html"
+							rel="login" class="linkform">已经有账户？点击这里登录</a>
+
+
+
+						<div class="clear"></div>
+
+
+
+					</div>
+
+
+
+				</form>
+
+
+
+				<form class="login active">
+
+
+
+					<h3>登录</h3>
+
+
+
+					<div>
+						<a href="#0" id='wrx_login_close_bt'
+							class="cd-login-close img-replace">Close</a>
+					</div>
+
+
+
+					<div>
+
+
+
+						<input type="text" id="wrx_username" PlaceHolder="用户名" /> <span
+							class="error">This is an error</span>
+
+
+
+					</div>
+
+
+
+					<div>
+
+
+
+						<input type="password" id="wrx_password" PlaceHolder="登录密码" /> <span
+							class="error">This is an error</span>
+
+
+
+					</div>
+
+
+
+					<div id="wrx_hidden_code" style="display: none;">
+
+
+
+						<img id="wrx_code_img" class="wrx_code_popup"> <input type="text"
+							id="wrx_code" PlaceHolder="验证码" /> <span class="error">This is an
+							error</span>
+
+
+
+					</div>
+
+
+
+					<div style="margin-top: -15px;">
+
+						<label id="info" style="display: none;"></label> <a href="#"
+							rel="forgot_password" class="linkform">忘记密码?</a>
+
+					</div>
+
+
+
+					<div class="bottom">
+
+
+
+						<input type="submit" class="wrx_login_bt" readonly="true"
+							value="登录" /> <input id="wrx_login_bt" type="hidden"
+							rel="process" class="linkform"> <input type="cancel"
+							readonly="true" class="cd-popup-close wrx_popup_close" value="取消" />
+
+
+
+						<a href="#" rel="register" class="linkform">还没有账户？快速注册</a>
+
+
+
+						<div class="clear"></div>
+
+
+
+					</div>
+
+
+
+				</form>
+
+
+
+				<form class="process">
+
+
+
+					<div ng-spinner-bar class='page-spinner-bar'>
+
+
+
+						<div class='bounce1'></div>
+
+
+
+						<div class='bounce2'></div>
+
+
+
+						<div class='bounce3'></div>
+
+
+
+						<p class='process-info' id="wrx_process_info">登录中，请稍后</p>
+
+
+
+					</div>
+					<!-- END PAGE SPINNER -->
+
+
+
+				</form>
+
+
+
+				<form class="forgot_password">
+
+
+
+					<h3>忘记密码</h3>
+
+
+
+					<div>
+
+
+
+						<label>请输入用户名或邮箱</label> <input type="text" /> <span class="error">This
+							is an error</span>
+
+
+
+					</div>
+
+
+
+					<div class="bottom">
+
+
+
+						<input type="submit" value="找回密码" /> <a href="index.html"
+							rel="login" class="linkform">返回登录</a> <a href="register.html"
+							rel="register" class="linkform">还没有账户？点击注册</a>
+
+
+
+						<div class="clear"></div>
+
+
+
+					</div>
+
+
+
+				</form>
 
 
 
@@ -448,7 +342,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-			</div>
+			<div class="clear"></div>
 
 
 
@@ -456,15 +350,24 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-		<!-- The JavaScript -->
+	</div>
 
 
 
-		<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.4.2/jquery.min.js"></script>
+</div>
 
 
 
-		<script type="text/javascript">
+<!-- The JavaScript -->
+
+
+
+<script type="text/javascript"
+	src="http://libs.useso.com/js/jquery/1.4.2/jquery.min.js"></script>
+
+
+
+<script type="text/javascript">
 
 
 
@@ -756,7 +659,8 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-</div> <!-- cd-popup -->
+</div>
+<!-- cd-popup -->
 
 
 
@@ -764,4 +668,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/assets/exte
 
 
 
-<script src="<?php echo Yii::app()->baseUrl . '/assets/frame.layout/';?>js/popup.js"></script> <!-- Resource jQuery -->
+<script
+	src="<?php echo Yii::app()->baseUrl . '/assets/frame.layout/';?>js/popup.js"></script>
+<!-- Resource jQuery -->

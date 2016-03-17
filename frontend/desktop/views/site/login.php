@@ -2,43 +2,45 @@
 <html>
 <head>
 <?php
-
-Yii::app()->assets->registerCssForExtension('user_login_view', "css/normalize.css");
-Yii::app()->assets->registerCssForExtension('user_login_view', "css/default.css");
-Yii::app()->assets->registerCssForExtension('user_login_view', "css/styles.css");
-Yii::app()->assets->registerScriptForExtension('user_login_view', "js/stopExecutionOnTimeout.js?t=1");
-Yii::app()->assets->registerGlobalScript("custom.files/js/md5.js");
-Yii::app()->assets->registerGlobalScript("global.style/js/jquery.cookie.js");
+Yii::app ()->assets->registerCssForExtension ( 'user_login_view', "css/normalize.css" );
+Yii::app ()->assets->registerCssForExtension ( 'user_login_view', "css/default.css" );
+Yii::app ()->assets->registerCssForExtension ( 'user_login_view', "css/styles.css" );
+Yii::app ()->assets->registerScriptForExtension ( 'user_login_view', "js/stopExecutionOnTimeout.js?t=1" );
+Yii::app ()->assets->registerGlobalScript ( "custom.files/js/md5.js" );
+Yii::app ()->assets->registerGlobalScript ( "global.style/js/jquery.cookie.js" );
 ?>
 
 </head>
 <body>
-<div class="cont">
-	  <div class="demo">
-	    <div class="login">
-	      <div class="login__check">
-	      </div>
-	      <div class="login__form">
-	      <p class="login__signup" id="error__message" >Login error</p>
-	        <div class="login__row" id="icon__name">
-	          <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
-	            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+	<div class="cont">
+		<div class="demo">
+			<div class="login">
+				<div class="login__check"></div>
+				<div class="login__form">
+					<p class="login__signup" id="error__message">Login error</p>
+					<div class="login__row" id="icon__name">
+						<svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+	            <path
+								d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
 	          </svg>
-	          <input type="text"  id="username" class="login__input name" placeholder="用户名"/>
-	        </div>
-	        <div class="login__row" id="icon__password">
-	          <svg class="login__icon pass svg-icon"  viewBox="0 0 20 20">
-	            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+						<input type="text" id="username" class="login__input name"
+							placeholder="用户名" />
+					</div>
+					<div class="login__row" id="icon__password">
+						<svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+	            <path
+								d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
 	          </svg>
-	          <input type="password" id="password" class="login__input pass" placeholder="密码"/>
-	        </div>
-	        <button type="button" class="login__submit" id="button__submit" onclick="check();">登 录</button>
-	      </div>
-	    </div>
-	    <div class="app">
-	    </div>
-	  </div>
-	  </div>
+						<input type="password" id="password" class="login__input pass"
+							placeholder="密码" />
+					</div>
+					<button type="button" class="login__submit" id="button__submit"
+						onclick="check();">登 录</button>
+				</div>
+			</div>
+			<div class="app"></div>
+		</div>
+	</div>
 
 	<script type="text/javascript">
 
@@ -229,5 +231,5 @@ Yii::app()->assets->registerGlobalScript("global.style/js/jquery.cookie.js");
 	    });
 	});
 	</script>
-	</body>
+</body>
 </html>
