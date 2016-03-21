@@ -1,0 +1,1 @@
+<?php header("Location: http://wangrunxin.com/backend/web/index.php")?>
