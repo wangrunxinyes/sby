@@ -1,7 +1,6 @@
 <?php
+$menu = new weixin_setting_helper ();
 
-$menu = new weixin_setting_helper();
-
-echo $menu->setMenu();
+echo $menu->setMenu ();
 
 ?>

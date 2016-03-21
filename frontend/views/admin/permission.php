@@ -1,6 +1,5 @@
 <?php
-
-Yii::app()->clientScript->registerMetaTag(' text/html;charset=utf-8', null, 'Content-Type');
+Yii::app ()->clientScript->registerMetaTag ( ' text/html;charset=utf-8', null, 'Content-Type' );
 
 $code = '***';
 $message = 'permission denied | 无权访问';
@@ -16,7 +15,10 @@ $message = 'permission denied | 无权访问';
 
 
 
-<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en-US"><head>
+<html style=""
+	class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+	lang="en-US">
+<head>
 
 
 
@@ -24,35 +26,44 @@ $message = 'permission denied | 无权访问';
 
 
 
-<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title><?php echo $code;?> | WANG Runxin</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title><?php echo $code;?> | WANG Runxin</title>
 
 
 
-<meta name="description" content="Our 404 page"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Our 404 page">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
-<link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/img/dog.ico" />
+<link rel="shortcut icon"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/img/dog.ico" />
 
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/css.css">
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/css.css">
 
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/da84.css">
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/da84.css">
 
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/normalize.css" />
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/normalize.css" />
 
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/default.css">
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/default.css">
 
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/fakeLoader.css">
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/css/fakeLoader.css">
 
 
 
@@ -64,89 +75,95 @@ $message = 'permission denied | 无权访问';
 
 
 
-<div class="fakeloader"></div>
+	<div class="fakeloader"></div>
 
 
 
-<main class="content-primary">
+	<main class="content-primary">
 
 
 
-<div class="container">
+	<div class="container">
 
 
 
-<div class="dialog">
+		<div class="dialog">
 
 
 
-<h1 class="mega"><?php echo $code;?></h1>
+			<h1 class="mega"><?php echo $code;?></h1>
 
 
 
-<h2 class="subhead">Sorry&nbsp;|&nbsp;抱歉<br><lable class="description"><?php echo $message;?></lable><br>
+			<h2 class="subhead">
+				Sorry&nbsp;|&nbsp;抱歉<br>
+				<lable class="description"><?php echo $message;?></lable>
+				<br>
 
 
 
-</h2>
+			</h2>
 
 
 
-</div>
+		</div>
 
 
 
-<nav class="nav-choices">
+		<nav class="nav-choices">
 
 
 
-<div class="options">Your options&nbsp;|&nbsp;你的选择</div>
+			<div class="options">Your options&nbsp;|&nbsp;你的选择</div>
 
 
 
-<ul><li><a class="btn btn-primary" href="http://www.wangrunxin.com/">主页 | home</a></li>
+			<ul>
+				<li><a class="btn btn-primary" href="http://www.wangrunxin.com/">主页
+						| home</a></li>
 
 
 
-<li id="separator-404" class="separator">&nbsp;&nbsp;</li><li><a class="btn btn-primary" href="<?php
-echo Yii::app()->request->hostInfo . Yii::app()->homeUrl . 'admin/index/par/log';
-?>" id="punch-a-moose" >登录 | Login</a>
+				<li id="separator-404" class="separator">&nbsp;&nbsp;</li>
+				<li><a class="btn btn-primary"
+					href="<?php
+					echo Yii::app ()->request->hostInfo . Yii::app ()->homeUrl . 'admin/index/par/log';
+					?>"
+					id="punch-a-moose">登录 | Login</a></li>
 
 
 
-</li>
+			</ul>
 
 
 
-</ul>
+		</nav>
 
 
 
-</nav>
+	</div>
 
 
 
-</div>
-
-
-
-</main>
-
-
-
+	</main>
 
 
 
 
-<script src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/js/jquery.min.js"></script>
 
 
 
-<script src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/js/fakeLoader.min.js"></script>
+	<script
+		src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/js/jquery.min.js"></script>
 
 
 
-    <script>
+	<script
+		src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/js/fakeLoader.min.js"></script>
+
+
+
+	<script>
 
 
 

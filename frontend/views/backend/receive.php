@@ -9,13 +9,12 @@
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
  */
-
-if (Yii::app()->data->getValue("data") != Yii::app()->weixin->getId()) {
-	header('HTTP/1.1 405 Ref.431.6.31');
-} else if (is_null(Yii::app()->data->getValue("des"))) {
-	header('HTTP/1.1 405 Ref.431.6.32');
+if (Yii::app ()->data->getValue ( "data" ) != Yii::app ()->weixin->getId ()) {
+	header ( 'HTTP/1.1 405 Ref.431.6.31' );
+} else if (is_null ( Yii::app ()->data->getValue ( "des" ) )) {
+	header ( 'HTTP/1.1 405 Ref.431.6.32' );
 } else {
-	$upload_handler = new UploadHandler();
+	$upload_handler = new UploadHandler ();
 }
 
 ?>

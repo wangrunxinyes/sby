@@ -1,34 +1,31 @@
 <?php
+$filename = Yii::app ()->getRuntimePath () . "/application.log";
 
-$filename = Yii::app()->getRuntimePath() . "/application.log";
+$handle = fopen ( $filename, "r" ); // 读取二进制文件时，需要将第二个参数设置成'rb'
+                                 
+// 通过filesize获得文件大小，将整个文件一下子读到一个字符串中
 
-$handle = fopen($filename, "r"); //读取二进制文件时，需要将第二个参数设置成'rb'
+$contents = fread ( $handle, filesize ( $filename ) );
 
-//通过filesize获得文件大小，将整个文件一下子读到一个字符串中
+$array = explode ( "---", $contents );
 
-$contents = fread($handle, filesize($filename));
-
-$array = explode("---", $contents);
-
-if (count($array) < 30) {
-
+if (count ( $array ) < 30) {
+	
 	$id = 0;
-
 } else {
-
-	$id = count($array);
-
+	
+	$id = count ( $array );
 }
 
 $contents = "";
 $identify = 1;
-for ($i = $id - 1; $i > $id - 30; $i--) {
+for($i = $id - 1; $i > $id - 30; $i --) {
 	$contents .= '
-    ' . $array[$i] . '----------------[id=>' . $identify . ']----------------';
-	$identify++;
+    ' . $array [$i] . '----------------[id=>' . $identify . ']----------------';
+	$identify ++;
 }
 
-fclose($handle);
+fclose ( $handle );
 
 ?>
 
@@ -54,27 +51,30 @@ fclose($handle);
 
 
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 
 
-	<title>Admin|日志</title>
+<title>Admin|日志</title>
 
 
 
-	<script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/application.log/scripts/shCore.js"></script>
+<script type="text/javascript"
+	src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/application.log/scripts/shCore.js"></script>
 
 
 
-	<script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/application.log/scripts/shBrushJScript.js"></script>
+<script type="text/javascript"
+	src="<?php echo Yii::app()->baseUrl;?>/assets/global.style/application.log/scripts/shBrushJScript.js"></script>
 
 
 
-	<link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/application.log/styles/shCoreDefault.css"/>
+<link type="text/css" rel="stylesheet"
+	href="<?php echo Yii::app()->baseUrl;?>/assets/global.style/application.log/styles/shCoreDefault.css" />
 
 
 
-	<script type="text/javascript">SyntaxHighlighter.all();</script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 
 
 
@@ -90,13 +90,13 @@ fclose($handle);
 
 
 
-<h1>WANGRUNXIN.COM</h1>
+	<h1>WANGRUNXIN.COM</h1>
 
-<h2>application.log</h2>
+	<h2>application.log</h2>
 
 
 
-<pre class="brush: js;">
+	<pre class="brush: js;">
 
 
 
@@ -104,7 +104,7 @@ fclose($handle);
 
 // for($i = $id; $i < count($array)-1; $i++){
 
-// 	echo $array[$i]."---------------------------------------------------------------------------------------";
+// echo $array[$i]."---------------------------------------------------------------------------------------";
 
 // }
 
@@ -115,8 +115,6 @@ echo $contents;
 
 
 </pre>
-
-
 
 </html>
 

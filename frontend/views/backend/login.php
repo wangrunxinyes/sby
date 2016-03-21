@@ -1,57 +1,55 @@
 <?php
+Yii::app ()->assets->registerCss ( 'global/plugins/font-awesome/css/font-awesome.min.css' );
 
-Yii::app()->
-	assets->registerCss('global/plugins/font-awesome/css/font-awesome.min.css');
+Yii::app ()->assets->registerCss ( 'global/plugins/simple-line-icons/simple-line-icons.min.css' );
 
-Yii::app()->assets->registerCss('global/plugins/simple-line-icons/simple-line-icons.min.css');
+Yii::app ()->assets->registerCss ( 'global/plugins/bootstrap/css/bootstrap.min.css' );
 
-Yii::app()->assets->registerCss('global/plugins/bootstrap/css/bootstrap.min.css');
+Yii::app ()->assets->registerCss ( 'global/plugins/uniform/css/uniform.default.css' );
 
-Yii::app()->assets->registerCss('global/plugins/uniform/css/uniform.default.css');
+Yii::app ()->assets->registerCss ( 'global/plugins/select2/select2.css' );
 
-Yii::app()->assets->registerCss('global/plugins/select2/select2.css');
+Yii::app ()->assets->registerCss ( 'admin/pages/css/login-soft.css' );
 
-Yii::app()->assets->registerCss('admin/pages/css/login-soft.css');
+Yii::app ()->assets->registerCss ( 'global/css/components.css' );
 
-Yii::app()->assets->registerCss('global/css/components.css');
+Yii::app ()->assets->registerCss ( 'global/css/plugins.css' );
 
-Yii::app()->assets->registerCss('global/css/plugins.css');
+Yii::app ()->assets->registerCss ( 'admin/layout/css/layout.css' );
 
-Yii::app()->assets->registerCss('admin/layout/css/layout.css');
+Yii::app ()->assets->registerCss ( 'admin/layout/css/themes/darkblue.css' );
 
-Yii::app()->assets->registerCss('admin/layout/css/themes/darkblue.css');
+Yii::app ()->assets->registerScript ( 'global.style/js/jquery.cookie.js' );
 
-Yii::app()->assets->registerScript('global.style/js/jquery.cookie.js');
+Yii::app ()->assets->registerScript ( 'custom.files/js/md5.js' );
 
-Yii::app()->assets->registerScript('custom.files/js/md5.js');
+Yii::app ()->assets->registerScript ( 'custom.files/js/handle.login.js' );
 
-Yii::app()->assets->registerScript('custom.files/js/handle.login.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/jquery-migrate.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/jquery-migrate.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/bootstrap/js/bootstrap.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/bootstrap/js/bootstrap.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/jquery.blockui.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/jquery.blockui.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/uniform/jquery.uniform.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/uniform/jquery.uniform.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/jquery.cokie.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/jquery.cokie.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/jquery-validation/js/jquery.validate.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/jquery-validation/js/jquery.validate.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/backstretch/jquery.backstretch.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/backstretch/jquery.backstretch.min.js');
+Yii::app ()->assets->registerScript ( 'global/plugins/select2/select2.min.js' );
 
-Yii::app()->assets->registerScript('global/plugins/select2/select2.min.js');
+Yii::app ()->assets->registerScript ( 'global/scripts/metronic.js' );
 
-Yii::app()->assets->registerScript('global/scripts/metronic.js');
+Yii::app ()->assets->registerScript ( 'admin/layout/scripts/layout.js' );
 
-Yii::app()->assets->registerScript('admin/layout/scripts/layout.js');
+Yii::app ()->assets->registerScript ( 'admin/layout/scripts/demo.js' );
 
-Yii::app()->assets->registerScript('admin/layout/scripts/demo.js');
+Yii::app ()->assets->registerScript ( 'admin/pages/scripts/login-soft.js' );
 
-Yii::app()->assets->registerScript('admin/pages/scripts/login-soft.js');
-
-Yii::app()->assets->registerScript('custom.files/js/handle.login.js');
+Yii::app ()->assets->registerScript ( 'custom.files/js/handle.login.js' );
 
 ?>
 <!DOCTYPE html>
@@ -60,29 +58,29 @@ Yii::app()->assets->registerScript('custom.files/js/handle.login.js');
 
 <head>
 
-  <meta charset="utf-8"/>
+<meta charset="utf-8" />
 
-  <title>Login|登陆</title>
+<title>Login|登陆</title>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-  <!-- END THEME STYLES -->
+<!-- END THEME STYLES -->
 
 </head>
 
-  <!-- END HEAD -->
+<!-- END HEAD -->
 
-  <!-- BEGIN BODY -->
+<!-- BEGIN BODY -->
 
 <body class="login">
 
-  <!-- BEGIN LOGO -->
+	<!-- BEGIN LOGO -->
 
-  <!-- <div class="logo">
+	<!-- <div class="logo">
 
   <a>
 
@@ -90,343 +88,349 @@ Yii::app()->assets->registerScript('custom.files/js/handle.login.js');
 
 </div>
 -->
-<!-- END LOGO -->
+	<!-- END LOGO -->
 
-<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+	<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 
-<input type="hidden" value="<?php echo Yii::app()->
-	request->hostInfo . Yii::app()->homeUrl; ?>data/login" id="login_url"/>
-<input type="hidden" value="<?php echo Yii::app()->
-	request->hostInfo . Yii::app()->homeUrl; ?>data/code/rnd/" id="login_code_url"/>
-<input type="hidden" value="<?php
+	<input type="hidden"
+		value="<?php
+		
+echo Yii::app ()->request->hostInfo . Yii::app ()->homeUrl;
+		?>data/login"
+		id="login_url" />
+	<input type="hidden"
+		value="<?php
+		
+echo Yii::app ()->request->hostInfo . Yii::app ()->homeUrl;
+		?>data/code/rnd/"
+		id="login_code_url" />
+	<input type="hidden"
+		value="<?php
+		
+		$redirect_url = Yii::app ()->data->getValue ( 'redirect' );
+		
+		if ($redirect_url != null) {
+			
+			echo $redirect_url;
+		} else {
+			
+			echo Yii::app ()->request->hostInfo . Yii::app ()->homeUrl . "backend/";
+		}
+		
+		?>"
+		id="redirect_url" />
+	<div class="menu-toggler sidebar-toggler"></div>
 
-$redirect_url = Yii::app()->
-	data->getValue('redirect');
+	<div id="hidden_form" style="display: none"></div>
 
-if ($redirect_url != null) {
+	<!-- END SIDEBAR TOGGLER BUTTON -->
 
-	echo $redirect_url;
+	<!-- BEGIN LOGIN -->
 
-} else {
+	<div class="content">
 
-	echo Yii::app()->request->hostInfo . Yii::app()->homeUrl . "backend/";
+		<!-- BEGIN LOGIN FORM -->
 
-}
+		<div id="info" class="copyright"></div>
 
-?>" id="redirect_url"/>
-<div class="menu-toggler sidebar-toggler"></div>
+		<div id="mainbody">
 
-<div id="hidden_form" style="display:none"></div>
+			<form class="login-form">
 
-<!-- END SIDEBAR TOGGLER BUTTON -->
+				<h3 class="form-title">登陆您的账户</h3>
 
-<!-- BEGIN LOGIN -->
+				<div class="alert alert-info" style="display: none"></div>
 
-<div class="content">
+				<div class="alert alert-danger display-hide">
 
-  <!-- BEGIN LOGIN FORM -->
+					<button class="close" data-close="alert"></button>
 
-  <div id ="info" class="copyright"></div>
+					<span>请输入您的用户名和密码.</span>
 
-  <div id ="mainbody">
+				</div>
 
-    <form class="login-form">
+				<div class="form-group">
 
-      <h3 class="form-title">登陆您的账户</h3>
+					<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 
-      <div class="alert alert-info"  style="display:none"></div>
+					<label class="control-label visible-ie8 visible-ie9">用户名</label>
 
-      <div class="alert alert-danger display-hide">
+					<div class="input-icon">
+						<i class="fa fa-user"></i> <input
+							class="form-control placeholder-no-fix" type="text"
+							autocomplete="off" placeholder="用户名" name="login_username"
+							id="login_username" />
 
-        <button class="close" data-close="alert"></button>
+					</div>
 
-        <span>请输入您的用户名和密码.</span>
+				</div>
 
-      </div>
+				<div class="form-group">
 
-      <div class="form-group">
+					<label class="control-label visible-ie8 visible-ie9">密码</label>
 
-        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+					<div class="input-icon">
+						<i class="fa fa-lock"></i> <input
+							class="form-control placeholder-no-fix" type="password"
+							autocomplete="off" placeholder="密码" name="login_password"
+							id="login_password" />
 
-        <label class="control-label visible-ie8 visible-ie9">用户名</label>
+					</div>
 
-        <div class="input-icon"> <i class="fa fa-user"></i>
+				</div>
 
-          <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="login_username" id="login_username"/>
+				<div class="form-group" id="hidden_code" style="display: none">
 
-        </div>
+					<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 
-      </div>
+					<label class="control-label visible-ie8 visible-ie9">验证码</label>
 
-      <div class="form-group">
+					<div class="input-icon">
 
-        <label class="control-label visible-ie8 visible-ie9">密码</label>
+						<i class="fa fa-check-circle-o"></i> <input
+							class="form-control placeholder-no-fix" style="width: 50%"
+							type="text" autocomplete="off" placeholder="验证码"
+							name="login_code" id="login_code" /> <img id="hidden_code_img"
+							alt="" />
 
-        <div class="input-icon"> <i class="fa fa-lock"></i>
+					</div>
 
-          <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="login_password" id="login_password"/>
+				</div>
 
-        </div>
+				<div class="form-actions" style="height: 32px">
 
-      </div>
+					<p>
 
-      <div class="form-group" id="hidden_code" style="display:none">
+						<button type="button" data-type="login-trigger"
+							style="width: 100%" class="btn blue pull-right">
+							登陆 <i class="m-icon-swapright m-icon-white"></i>
 
-        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+						</button>
 
-        <label class="control-label visible-ie8 visible-ie9">验证码</label>
+					</p>
 
-        <div class="input-icon">
+				</div>
 
-          <i class="fa fa-check-circle-o"></i>
+				<div class="forget-password">
 
-          <input class="form-control placeholder-no-fix" style="width:50%" type="text" autocomplete="off" placeholder="验证码" name="login_code" id="login_code"/>
+					<p>
+						版本信息&nbsp; <a
+							href="<?php echo Yii::app()->assets->getUrlPath('backend/aboutus') ?>"
+							id="">关于后台管理系统</a>
+					</p>
 
-          <img id="hidden_code_img" alt=""/>
+				</div>
 
-        </div>
+				<div class="create-account">
 
-      </div>
+					<div class="copyright">
 
-      <div class="form-actions" style="height:32px">
+						<p>&nbsp; WANG RUNXIN AUTH CENTER</p>
 
-        <p>
+					</div>
 
-          <button type="button" data-type="login-trigger" style="width:100%" class="btn blue pull-right">
-            登陆
-            <i class="m-icon-swapright m-icon-white"></i>
+				</div>
 
-          </button>
+			</form>
 
-        </p>
+		</div>
 
-      </div>
+		<!-- END LOGIN FORM -->
 
-      <div class="forget-password">
+		<!-- BEGIN FORGOT PASSWORD FORM -->
 
-        <p>版本信息&nbsp;
-          <a href="<?php echo Yii::app()->assets->getUrlPath('backend/aboutus') ?>" id="">关于后台管理系统</a>
-        </p>
+		<form class="forget-form" action="index.html" method="post">
 
-      </div>
+			<h3>忘记密码 ?</h3>
 
-      <div class="create-account">
+			<p>请输入您的电子邮箱地址来重设密码.</p>
 
-        <div class="copyright">
+			<div class="form-group">
 
-          <p>&nbsp; WANG RUNXIN AUTH CENTER</p>
+				<div class="input-icon">
 
-        </div>
+					<i class="fa fa-envelope"></i> <input
+						class="form-control placeholder-no-fix" type="text"
+						autocomplete="off" placeholder="Email" name="email" />
 
-      </div>
+				</div>
 
-    </form>
+			</div>
 
-  </div>
+			<div class="form-actions">
 
-  <!-- END LOGIN FORM -->
+				<button type="button" id="back-btn" class="btn">
 
-  <!-- BEGIN FORGOT PASSWORD FORM -->
+					<i class="m-icon-swapleft"></i> 返回
+				</button>
 
-  <form class="forget-form" action="index.html" method="post">
+				<button type="submit" class="btn blue pull-right">
+					提交 <i class="m-icon-swapright m-icon-white"></i>
 
-    <h3>忘记密码 ?</h3>
+				</button>
 
-    <p>请输入您的电子邮箱地址来重设密码.</p>
+			</div>
 
-    <div class="form-group">
+		</form>
 
-      <div class="input-icon">
+		<!-- END FORGOT PASSWORD FORM -->
 
-        <i class="fa fa-envelope"></i>
+		<!-- BEGIN REGISTRATION FORM -->
 
-        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email"/>
+		<form class="register-form" action="index.html" method="post">
 
-      </div>
+			<h3>注册账号</h3>
 
-    </div>
+			<p>请填写账号信息:</p>
 
-    <div class="form-actions">
+			<div class="form-group">
 
-      <button type="button" id="back-btn" class="btn">
+				<label class="control-label visible-ie8 visible-ie9">用户名</label>
 
-        <i class="m-icon-swapleft"></i>
-        返回
-      </button>
+				<div class="input-icon">
 
-      <button type="submit" class="btn blue pull-right">
-        提交
-        <i class="m-icon-swapright m-icon-white"></i>
+					<i class="fa fa-user"></i> <input
+						class="form-control placeholder-no-fix" type="text"
+						autocomplete="off" placeholder="用户名" name="username" />
 
-      </button>
+				</div>
 
-    </div>
+			</div>
 
-  </form>
+			<div class="form-group">
 
-  <!-- END FORGOT PASSWORD FORM -->
+				<label class="control-label visible-ie8 visible-ie9">密码</label>
 
-  <!-- BEGIN REGISTRATION FORM -->
+				<div class="input-icon">
 
-  <form class="register-form" action="index.html" method="post">
+					<i class="fa fa-lock"></i> <input
+						class="form-control placeholder-no-fix" type="password"
+						autocomplete="off" id="register_password" placeholder="密码"
+						name="password" />
 
-    <h3>注册账号</h3>
+				</div>
 
-    <p>请填写账号信息:</p>
+			</div>
 
-    <div class="form-group">
+			<div class="form-group">
 
-      <label class="control-label visible-ie8 visible-ie9">用户名</label>
+				<label class="control-label visible-ie8 visible-ie9">请再次输入您的密码</label>
 
-      <div class="input-icon">
+				<div class="controls">
 
-        <i class="fa fa-user"></i>
+					<div class="input-icon">
 
-        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="username"/>
+						<i class="fa fa-check"></i> <input
+							class="form-control placeholder-no-fix" type="password"
+							autocomplete="off" placeholder="请再次输入您的密码" name="rpassword" />
 
-      </div>
+					</div>
 
-    </div>
+				</div>
 
-    <div class="form-group">
+			</div>
 
-      <label class="control-label visible-ie8 visible-ie9">密码</label>
+			<p>请填写个人信息，以便我们为您提供更好的服务:</p>
 
-      <div class="input-icon">
+			<div class="form-group">
 
-        <i class="fa fa-lock"></i>
+				<label class="control-label visible-ie8 visible-ie9">您的姓名</label>
 
-        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="密码" name="password"/>
+				<div class="input-icon">
 
-      </div>
+					<i class="fa fa-font"></i> <input
+						class="form-control placeholder-no-fix" type="text"
+						placeholder="您的姓名" name="fullname" />
 
-    </div>
+				</div>
 
-    <div class="form-group">
+			</div>
 
-      <label class="control-label visible-ie8 visible-ie9">请再次输入您的密码</label>
+			<div class="form-group">
 
-      <div class="controls">
+				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 
-        <div class="input-icon">
+				<label class="control-label visible-ie8 visible-ie9">电子邮件地址</label>
 
-          <i class="fa fa-check"></i>
+				<div class="input-icon">
 
-          <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="请再次输入您的密码" name="rpassword"/>
+					<i class="fa fa-envelope"></i> <input
+						class="form-control placeholder-no-fix" type="text"
+						placeholder="电子邮件地址" name="email" />
 
-        </div>
+				</div>
 
-      </div>
+			</div>
 
-    </div>
+			<div class="form-group">
 
-    <p>请填写个人信息，以便我们为您提供更好的服务:</p>
+				<label class="control-label visible-ie8 visible-ie9">常用地址</label>
 
-    <div class="form-group">
+				<div class="input-icon">
 
-      <label class="control-label visible-ie8 visible-ie9">您的姓名</label>
+					<i class="fa fa-check"></i> <input
+						class="form-control placeholder-no-fix" type="text"
+						placeholder="常用地址" name="address" />
 
-      <div class="input-icon">
+				</div>
 
-        <i class="fa fa-font"></i>
+			</div>
 
-        <input class="form-control placeholder-no-fix" type="text" placeholder="您的姓名" name="fullname"/>
+			<div class="form-group">
 
-      </div>
+				<label class="control-label visible-ie8 visible-ie9">请填写城市</label>
 
-    </div>
+				<div class="input-icon">
 
-    <div class="form-group">
+					<i class="fa fa-location-arrow"></i> <input
+						class="form-control placeholder-no-fix" type="text"
+						placeholder="城市" name="city" />
 
-      <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+				</div>
 
-      <label class="control-label visible-ie8 visible-ie9">电子邮件地址</label>
+			</div>
 
-      <div class="input-icon">
+			<div class="form-group">
 
-        <i class="fa fa-envelope"></i>
+				<label> <input type="checkbox" name="tnc" /> 我已经阅读并同意网站 <a href="#">服务条款</a>
+					和 <a href="#">隐私保护协议</a>
 
-        <input class="form-control placeholder-no-fix" type="text" placeholder="电子邮件地址" name="email"/>
+				</label>
 
-      </div>
+				<div id="register_tnc_error"></div>
 
-    </div>
+			</div>
 
-    <div class="form-group">
+			<div class="form-actions">
 
-      <label class="control-label visible-ie8 visible-ie9">常用地址</label>
+				<button id="register-back-btn" type="button" class="btn">
 
-      <div class="input-icon">
+					<i class="m-icon-swapleft"></i> 返回登陆
+				</button>
 
-        <i class="fa fa-check"></i>
+				<button type="submit" id="register-submit-btn"
+					class="btn blue pull-right">
+					注册 <i class="m-icon-swapright m-icon-white"></i>
 
-        <input class="form-control placeholder-no-fix" type="text" placeholder="常用地址" name="address"/>
+				</button>
 
-      </div>
+			</div>
 
-    </div>
+		</form>
 
-    <div class="form-group">
+		<!-- END REGISTRATION FORM -->
 
-      <label class="control-label visible-ie8 visible-ie9">请填写城市</label>
+	</div>
 
-      <div class="input-icon">
+	<!-- END LOGIN -->
 
-        <i class="fa fa-location-arrow"></i>
+	<!-- BEGIN COPYRIGHT -->
 
-        <input class="form-control placeholder-no-fix" type="text" placeholder="城市" name="city"/>
+	<div class="copyright"></div>
 
-      </div>
+	<!-- END COPYRIGHT -->
 
-    </div>
-
-    <div class="form-group">
-
-      <label>
-
-        <input type="checkbox" name="tnc"/>
-        我已经阅读并同意网站
-        <a href="#">服务条款</a>
-        和
-        <a href="#">隐私保护协议</a>
-
-      </label>
-
-      <div id="register_tnc_error"></div>
-
-    </div>
-
-    <div class="form-actions">
-
-      <button id="register-back-btn" type="button" class="btn">
-
-        <i class="m-icon-swapleft"></i>
-        返回登陆
-      </button>
-
-      <button type="submit" id="register-submit-btn" class="btn blue pull-right">
-        注册
-        <i class="m-icon-swapright m-icon-white"></i>
-
-      </button>
-
-    </div>
-
-  </form>
-
-  <!-- END REGISTRATION FORM -->
-
-</div>
-
-<!-- END LOGIN -->
-
-<!-- BEGIN COPYRIGHT -->
-
-<div class="copyright"></div>
-
-<!-- END COPYRIGHT -->
-
-<script>
+	<script>
 
 
 
@@ -628,7 +632,7 @@ jQuery(document).ready(function() {
 
 </script>
 
-<!-- END JAVASCRIPTS -->
+	<!-- END JAVASCRIPTS -->
 
 </body>
 
