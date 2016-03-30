@@ -49,7 +49,7 @@ use yii\helpers\Url;
 		</div>
 		<div class="navbox">
 			<div class="navbox-tiles">
-				<a href="<?php echo Url::to("@web/wang"); ?>"
+				<a href="<?php echo Url::to("@web/site"); ?>"
 					class="tile">
 					<div class="icon">
 						<i class="fa fa-bank"></i>
@@ -63,7 +63,7 @@ use yii\helpers\Url;
 					<div class="icon">
 						<i class="fa fa-heart"></i>
 					</div> <span class="title">Blog</span>
-				</a> <a href="<?php echo Url::to("@web/project"); ?>" class="tile">
+				</a> <a href="<?php echo Url::to("@web/blog"); ?>" class="tile">
 					<div class="icon">
 						<i class="fa fa-lg fa-users"></i>
 					</div> <span class="title">Project</span>
@@ -71,7 +71,7 @@ use yii\helpers\Url;
 					<div class="icon">
 						<i class="fa fa-book"></i>
 					</div> <span class="title">Resume</span>
-				</a> <a href="<?php echo Url::to("@web/wang/about"); ?>" class="tile">
+				</a> <a href="<?php echo Url::to("@web/site/about"); ?>" class="tile">
 					<div class="icon">
 						<i class="fa fa-info"></i>
 					</div> <span class="title">About</span>

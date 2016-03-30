@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use frontend\assets\IndexAsset;
+use yii\helpers\Url;
 
 $asset = IndexAsset::register ( $this );
 ?>
@@ -29,7 +30,7 @@ $asset = IndexAsset::register ( $this );
 						</li>
 						-->
 						<li><a title="contact" href="#contact">Contact</a></li>
-						<li><a href="page.html">Vocational abilities</a></li>
+						<li><a href="<?php echo Url::to('tour/default')?>">More</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -40,8 +41,7 @@ $asset = IndexAsset::register ( $this );
 <div id="header-wrapper" class="header-slider">
 	<header class="clearfix">
 		<div class="logo">
-			<img
-				src="<?php echo $asset->baseUrl.("/img/logo-image.png"); ?>"
+			<img src="<?php echo $asset->baseUrl.("/img/logo-image.png"); ?>"
 				alt="" />
 		</div>
 		<div class="container">
@@ -97,14 +97,13 @@ $asset = IndexAsset::register ( $this );
 			<div class="span4 offset1">
 				<div>
 					<h2>
-						We live with <strong>creativity</strong>
+						I'm a <strong>energetic</strong> girl
 					</h2>
-					<p>Li Europan lingues es membres del sam familie. Lor separat
-						existentie es un myth. Por scientie, musica, sport etc, litot
-						Europa usa li sam vocabular. Li lingues differe solmen in li
-						grammatica, li pronunciation e li plu commun vocabules. Omnicos
-						directe al desirabilite de un nov lingua franca: On refusa
-						continuar payar custosi traductores.</p>
+					<p>I like travel and sports, especially running and climb. Besides,
+						as a girl of software engineerning major, I familiar with computer
+						and love to play computer game.</p>
+					<a href="<?php echo Url::to("site/resume")?>" data-filter="*"
+						class="btn btn-theme pull-left">Resume and more </a>
 				</div>
 			</div>
 			<div class="span6">
@@ -112,53 +111,6 @@ $asset = IndexAsset::register ( $this );
 					<img
 						src="<?php echo $asset->baseUrl.("/img/icons/creativity.png"); ?>"
 						alt="" />
-				</div>
-			</div>
-		</div>
-		<div class="row" style="display: none;">
-			<div class="span2 offset1 flyIn">
-				<div class="people">
-					<img class="team-thumb img-circle"
-						src="<?php echo $asset->baseUrl.("/img/team/img-1.jpg"); ?>"
-						alt="" />
-					<h3>John Doe</h3>
-					<p>Art director</p>
-				</div>
-			</div>
-			<div class="span2 flyIn">
-				<div class="people">
-					<img class="team-thumb img-circle"
-						src="<?php echo $asset->baseUrl.("/img/team/img-2.jpg"); ?>"
-						alt="" />
-					<h3>Mike Doe</h3>
-					<p>Web developer</p>
-				</div>
-			</div>
-			<div class="span2 flyIn">
-				<div class="people">
-					<img class="team-thumb img-circle"
-						src="<?php echo $asset->baseUrl.("/img/team/img-3.jpg"); ?>"
-						alt="" />
-					<h3>Neil Doe</h3>
-					<p>Web designer</p>
-				</div>
-			</div>
-			<div class="span2 flyIn">
-				<div class="people">
-					<img class="team-thumb img-circle"
-						src="<?php echo $asset->baseUrl.("/img/team/img-4.jpg"); ?>"
-						alt="" />
-					<h3>Mark Joe</h3>
-					<p>UI designer</p>
-				</div>
-			</div>
-			<div class="span2 flyIn">
-				<div class="people">
-					<img class="team-thumb img-circle"
-						src="<?php echo $asset->baseUrl.("/img/team/img-5.jpg"); ?>"
-						alt="" />
-					<h3>Stephen B</h3>
-					<p>Digital imaging</p>
 				</div>
 			</div>
 		</div>
@@ -174,42 +126,34 @@ $asset = IndexAsset::register ( $this );
 		<div class="row">
 			<div class="span3 animated-fast flyIn">
 				<div class="service-box">
-					<img
-						src="<?php echo $asset->baseUrl.("/img/icons/laptop.png"); ?>"
+					<img src="<?php echo $asset->baseUrl.("/img/icons/laptop.png"); ?>"
 						alt="" />
-					<h2>Web design</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry.</p>
+					<h2>Computer Games</h2>
+					<p>I love to play games but still a newbie.</p>
 				</div>
 			</div>
 			<div class="span3 animated flyIn">
 				<div class="service-box">
-					<img
-						src="<?php echo $asset->baseUrl.("/img/icons/lab.png"); ?>"
+					<img src="<?php echo $asset->baseUrl.("/img/icons/lab.png"); ?>"
 						alt="" />
-					<h2>Web development</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry.</p>
+					<h2>something new</h2>
+					<p>New technology makes me looking forward to the future.</p>
 				</div>
 			</div>
 			<div class="span3 animated-fast flyIn">
 				<div class="service-box">
-					<img
-						src="<?php echo $asset->baseUrl.("/img/icons/camera.png"); ?>"
+					<img src="<?php echo $asset->baseUrl.("/img/icons/camera.png"); ?>"
 						alt="" />
-					<h2>Photography</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry.</p>
+					<h2>Travel</h2>
+					<p>I love to travel and take photoes.</p>
 				</div>
 			</div>
 			<div class="span3 animated-slow flyIn">
 				<div class="service-box">
-					<img
-						src="<?php echo $asset->baseUrl.("/img/icons/basket.png"); ?>"
+					<img src="<?php echo $asset->baseUrl.("/img/icons/basket.png"); ?>"
 						alt="" />
-					<h2>Ecommerce</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry.</p>
+					<h2>Buy and buy</h2>
+					<p>New clothes, shoes and every beautiful things are all mine, LOL.</p>
 				</div>
 			</div>
 		</div>
@@ -434,11 +378,7 @@ $asset = IndexAsset::register ( $this );
 <section id="contact" class="section green">
 	<div class="container">
 		<h4>Get in Touch</h4>
-		<p>Reque facer nostro et ius, cu persius mnesarchum disputando eam,
-			clita prompta et mel vidisse phaedrum pri et. Facilisis posidonium ex
-			his. Mutat iudico vis in, mea aeque tamquam scripserit an, mea eu
-			ignota viderer probatus. Lorem legere consetetur ei eum. Sumo aeque
-			assentior te eam, pri nominati posidonium consttuam</p>
+		<p></p>
 		<div class="blankdivider30"></div>
 		<div class="row">
 			<div class="span12">
@@ -489,7 +429,7 @@ $asset = IndexAsset::register ( $this );
 	<div class="container">
 		<div class="row">
 			<div class="span6 offset3">
-				<ul class="social-networks">
+				<ul class="social-networks" style="display:none;">
 					<li><a href="#"> <i
 							class="icon-circled icon-bgdark icon-instagram icon-2x"></i>
 					</a></li>
