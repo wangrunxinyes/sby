@@ -73,7 +73,7 @@ class SiteController extends Controller {
 	 * @return mixed
 	 */
 	public function actionIndex() {
-		$this->layout = "clean";
+		$this->layout = "layout_clear";
 		return $this->render('index');
 	}
 
