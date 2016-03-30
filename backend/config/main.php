@@ -24,12 +24,12 @@ return [
 				'errorHandler' => [ 
 						'errorAction' => 'site/error' 
 				],
-				'db' => [ 
+				'db' => [
 						'class' => '\yii\db\Connection',
-						'dsn' => 'mysql:host=127.0.0.1;dbname=wangrunxin',
-						'username' => 'root',
-						'password' => 'wrx52691',
-						'charset' => 'utf8' 
+						'dsn' => 'mysql:host=31.220.110.2;dbname=u502190727_sby',
+						'username' => 'u502190727_sby',
+						'password' => 'wrx52sby',
+						'charset' => 'utf8'
 				],
 		/*
 			        'urlManager' => [

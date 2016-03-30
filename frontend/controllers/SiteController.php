@@ -63,8 +63,8 @@ class SiteController extends Controller {
 	}
 
 	public function actionError() {
-		$this->layout = "clean";
-		return $this->render('error');
+		$this->layout = "layout_clear";
+		return $this->render('index');
 	}
 
 	/**
@@ -116,6 +116,11 @@ class SiteController extends Controller {
 		Yii::$app->user->logout();
 
 		return $this->goHome();
+	}
+	
+	public function actionResume(){
+		$this->layout = "layout_menu";
+		return $this->render('resume');
 	}
 
 	/**

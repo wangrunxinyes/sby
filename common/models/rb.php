@@ -6349,7 +6349,7 @@ namespace RedBeanPHP\QueryWriter {
 					return PostgreSQL::C_DATATYPE_SPECIAL_POLYGON;
 				}
 
-				if (preg_match('/^\-?(\$|â‚¬|Â¥|Â£)[\d,\.]+$/', $value)) {
+				if (preg_match('/^\-?(\$|þý¬|Â¥|Â£)[\d,\.]+$/', $value)) {
 					return PostgreSQL::C_DATATYPE_SPECIAL_MONEY;
 				}
 
@@ -7164,6 +7164,7 @@ namespace RedBeanPHP\Repository {
 	use RedBeanPHP\OODBBean as OODBBean;
 	use RedBeanPHP\RedException as RedException;
 	use RedBeanPHP\Repository as Repository;
+	use RedBeanPHP\QueryWriter as QueryWriter;
 
 /**
  * Fluid Repository.

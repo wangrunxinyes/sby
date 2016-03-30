@@ -25,7 +25,14 @@ return [
 								// 'test/index/<id:\d+>/<cate>'=>'test/index',
 								'<_a:(test|test2)>/<id:\d+>' => '<_a>/index' 
 						] 
-				] 
+				],
+				'db' => [
+						'class' => '\yii\db\Connection',
+						'dsn' => 'mysql:host=31.220.110.2;dbname=u502190727_sby',
+						'username' => 'u502190727_sby',
+						'password' => 'wrx52sby',
+						'charset' => 'utf8'
+				],
 		],
 		'modules' => [ 
 				'cms' => [ 
@@ -33,7 +40,19 @@ return [
 				],
 				'property' => [ 
 						'class' => 'frontend\modules\property\property' 
-				] 
+				],
+				'tour' => [
+						'class' => 'frontend\modules\tour\tour'
+				],
+				'life' => [
+						'class' => 'frontend\modules\life\life'
+				],
+				'project' => [
+						'class' => 'frontend\modules\project\project',
+				],
+				'blog' => [
+						'class' => 'frontend\modules\blog\blog',
+				],
 		],
 		'params' => $params 
 ];

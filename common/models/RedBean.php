@@ -8,13 +8,7 @@ use RedBeanPHP\Facade;
 class RedBean extends Facade {
 	public $testResult;
 	function __construct() {
-		$this->testResult = false;
-		$ini = parse_ini_file ( "sql.ini", true );
-		$host = $ini ['mysql'] ['host'];
-		if($_SERVER['SERVER_NAME'] != 'wangrunxin.com'){
-			$host = "localhost";
-		}
-		self::setup ( "mysql:host=" . $host . ";dbname=" . $ini ['mysql'] ['schema'], $ini ['mysql'] ['user'], $ini ['mysql'] ['pass'] );
+		$this->testResult = false;		
 	}
 	function test() {
 		try {
