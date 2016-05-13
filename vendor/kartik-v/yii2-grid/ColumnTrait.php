@@ -9,7 +9,6 @@
 
 namespace kartik\grid;
 
-
 use \Closure;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
