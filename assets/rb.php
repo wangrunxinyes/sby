@@ -7706,8 +7706,8 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 				$insertcolumns [$k] = $this->esc ( $v );
 			}
 			
-			$insertSQL = "INSERT INTO $table ( id, " . implode ( ',', $insertcolumns ) . " ) VALUES
-
+			$insertSQL = "INSERT INTO $table ( id, " . implode ( ',', $insertcolumns ) . " ) VALUES
+
 			( $default, " . implode ( ',', array_fill ( 0, count ( $insertcolumns ), ' ? ' ) ) . " ) $suffix";
 			
 			$ids = array ();
@@ -8100,49 +8100,49 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 			
 			$inClause2 = $this->getParametersForInClause ( $linkIDs, $bindings, count ( $bindings ) ); // for some databases
 			
-			$sql = "
-
-			SELECT
-
-				{$destTable}.*,
-
-				COALESCE(
-
-				NULLIF({$linkTable}.{$sourceCol}, {$destTable}.id),
-
-				NULLIF({$linkTable}.{$destCol}, {$destTable}.id)) AS linked_by
-
-			FROM {$linkTable}
-
-			INNER JOIN {$destTable} ON
-
-			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) ) OR
-
-			( {$destTable}.id = {$linkTable}.{$sourceCol} AND {$linkTable}.{$destCol} IN ($inClause2) )
-
-			{$addSql}
-
+			$sql = "
+
+			SELECT
+
+				{$destTable}.*,
+
+				COALESCE(
+
+				NULLIF({$linkTable}.{$sourceCol}, {$destTable}.id),
+
+				NULLIF({$linkTable}.{$destCol}, {$destTable}.id)) AS linked_by
+
+			FROM {$linkTable}
+
+			INNER JOIN {$destTable} ON
+
+			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) ) OR
+
+			( {$destTable}.id = {$linkTable}.{$sourceCol} AND {$linkTable}.{$destCol} IN ($inClause2) )
+
+			{$addSql}
+
 			-- keep-cache";
 			
 			$linkIDs = array_merge ( $linkIDs, $linkIDs );
 		} else {
 			
-			$sql = "
-
-			SELECT
-
-				{$destTable}.*,
-
-				{$linkTable}.{$sourceCol} AS linked_by
-
-			FROM {$linkTable}
-
-			INNER JOIN {$destTable} ON
-
-			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) )
-
-			{$addSql}
-
+			$sql = "
+
+			SELECT
+
+				{$destTable}.*,
+
+				{$linkTable}.{$sourceCol} AS linked_by
+
+			FROM {$linkTable}
+
+			INNER JOIN {$destTable} ON
+
+			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) )
+
+			{$addSql}
+
 			-- keep-cache";
 		}
 		
@@ -8190,33 +8190,33 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 			
 			$inClause2 = $this->getParametersForInClause ( $linkIDs, $bindings, count ( $bindings ) ); // for some databases
 			
-			$sql = "
-
-			SELECT {$selector} FROM {$linkTable}
-
-			INNER JOIN {$destTable} ON
-
-			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) ) OR
-
-			( {$destTable}.id = {$linkTable}.{$sourceCol} AND {$linkTable}.{$destCol} IN ($inClause2) )
-
-			{$addSql}
-
+			$sql = "
+
+			SELECT {$selector} FROM {$linkTable}
+
+			INNER JOIN {$destTable} ON
+
+			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) ) OR
+
+			( {$destTable}.id = {$linkTable}.{$sourceCol} AND {$linkTable}.{$destCol} IN ($inClause2) )
+
+			{$addSql}
+
 			-- keep-cache";
 			
 			$linkIDs = array_merge ( $linkIDs, $linkIDs );
 		} else {
 			
-			$sql = "
-
-			SELECT {$selector} FROM {$linkTable}
-
-			INNER JOIN {$destTable} ON
-
-			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) )
-
-			{$addSql}
-
+			$sql = "
+
+			SELECT {$selector} FROM {$linkTable}
+
+			INNER JOIN {$destTable} ON
+
+			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} IN ($inClause) )
+
+			{$addSql}
+
 			-- keep-cache";
 		}
 		
@@ -8255,10 +8255,10 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 		
 		if ($sourceTable === $destTable) {
 			
-			$sql = "SELECT {$linkTable}.* FROM {$linkTable}
-
-				WHERE ( {$sourceCol} = ? AND {$destCol} = ? ) OR
-
+			$sql = "SELECT {$linkTable}.* FROM {$linkTable}
+
+				WHERE ( {$sourceCol} = ? AND {$destCol} = ? ) OR
+
 				 ( {$destCol} = ? AND {$sourceCol} = ? ) -- keep-cache";
 			
 			$row = $this->adapter->getRow ( $sql, array (
@@ -8269,8 +8269,8 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 			) );
 		} else {
 			
-			$sql = "SELECT {$linkTable}.* FROM {$linkTable}
-
+			$sql = "SELECT {$linkTable}.* FROM {$linkTable}
+
 				WHERE {$sourceCol} = ? AND {$destCol} = ? -- keep-cache";
 			
 			$row = $this->adapter->getRow ( $sql, array (
@@ -8319,16 +8319,16 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 		
 		if ($sourceType === $destType) {
 			
-			$sql = "
-
-			SELECT COUNT(*) FROM {$linkTable}
-
-			INNER JOIN {$destTable} ON
-
-			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} = ? ) OR
-
-			( {$destTable}.id = {$linkTable}.{$sourceCol} AND {$linkTable}.{$destCol} = ? )
-
+			$sql = "
+
+			SELECT COUNT(*) FROM {$linkTable}
+
+			INNER JOIN {$destTable} ON
+
+			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} = ? ) OR
+
+			( {$destTable}.id = {$linkTable}.{$sourceCol} AND {$linkTable}.{$destCol} = ? )
+
 			{$addSql}";
 			
 			$bindings = array_merge ( array (
@@ -8337,14 +8337,14 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 			), $bindings );
 		} else {
 			
-			$sql = "
-
-			SELECT COUNT(*) FROM {$linkTable}
-
-			INNER JOIN {$destTable} ON
-
-			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} = ? )
-
+			$sql = "
+
+			SELECT COUNT(*) FROM {$linkTable}
+
+			INNER JOIN {$destTable} ON
+
+			( {$destTable}.id = {$linkTable}.{$destCol} AND {$linkTable}.{$sourceCol} = ? )
+
 			{$addSql}";
 			
 			$bindings = array_merge ( array (
@@ -8390,12 +8390,12 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 		
 		if ($sourceTable === $destTable) {
 			
-			$sql = "DELETE FROM {$linkTable}
-
-				WHERE ( {$sourceCol} = ? ) OR
-
-				( {$destCol} = ?  )
-
+			$sql = "DELETE FROM {$linkTable}
+
+				WHERE ( {$sourceCol} = ? ) OR
+
+				( {$destCol} = ?  )
+
 			";
 			
 			$this->adapter->exec ( $sql, array (
@@ -8404,8 +8404,8 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 			) );
 		} else {
 			
-			$sql = "DELETE FROM {$linkTable}
-
+			$sql = "DELETE FROM {$linkTable}
+
 				WHERE {$sourceCol} = ? ";
 			
 			$this->adapter->exec ( $sql, array (
@@ -8485,16 +8485,16 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 		
 		$cName = 'cons_' . $fkName;
 		
-		$cfks = $this->adapter->getCell ( "
-
-			SELECT CONSTRAINT_NAME
-
-			FROM information_schema.KEY_COLUMN_USAGE
-
-			WHERE TABLE_SCHEMA ='$db' AND TABLE_NAME = '$tableNoQ'  AND COLUMN_NAME = '$columnNoQ' AND
-
-			CONSTRAINT_NAME <>'PRIMARY' AND REFERENCED_TABLE_NAME is not null
-
+		$cfks = $this->adapter->getCell ( "
+
+			SELECT CONSTRAINT_NAME
+
+			FROM information_schema.KEY_COLUMN_USAGE
+
+			WHERE TABLE_SCHEMA ='$db' AND TABLE_NAME = '$tableNoQ'  AND COLUMN_NAME = '$columnNoQ' AND
+
+			CONSTRAINT_NAME <>'PRIMARY' AND REFERENCED_TABLE_NAME is not null
+
 		" );
 		
 		$flagAddKey = FALSE;
@@ -8519,10 +8519,10 @@ abstract class RedBean_QueryWriter_AQueryWriter { // bracket must be here - othe
 			
 			if ($flagAddKey) {
 				
-				$this->adapter->exec ( "ALTER TABLE  $table
-
-				ADD CONSTRAINT $cName FOREIGN KEY $fkName (  $column ) REFERENCES  $targetTable (
-
+				$this->adapter->exec ( "ALTER TABLE  $table
+
+				ADD CONSTRAINT $cName FOREIGN KEY $fkName (  $column ) REFERENCES  $targetTable (
+
 				$targetColumn) ON DELETE " . ($isDependent ? 'CASCADE' : 'SET NULL') . ' ON UPDATE SET NULL ;' );
 			}
 		} catch ( Exception $e ) {
@@ -8843,12 +8843,12 @@ class RedBean_QueryWriter_MySQL extends RedBean_QueryWriter_AQueryWriter impleme
 			
 			$fks = $this->adapter->getCell ( 
 
-			"SELECT count(*)
-
-				FROM information_schema.KEY_COLUMN_USAGE
-
-				WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ? AND
-
+			"SELECT count(*)
+
+				FROM information_schema.KEY_COLUMN_USAGE
+
+				WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ? AND
+
 				CONSTRAINT_NAME <>'PRIMARY' AND REFERENCED_TABLE_NAME IS NOT NULL", 
 
 			array (
@@ -8877,22 +8877,22 @@ class RedBean_QueryWriter_MySQL extends RedBean_QueryWriter_AQueryWriter impleme
 				$this->widenColumn ( $table, $property2, RedBean_QueryWriter_MySQL::C_DATATYPE_UINT32 );
 			}
 			
-			$sql = "
-
-				ALTER TABLE " . $this->esc ( $table ) . "
-
-				ADD FOREIGN KEY($property1) references `$table1`(id) ON DELETE CASCADE;
-
+			$sql = "
+
+				ALTER TABLE " . $this->esc ( $table ) . "
+
+				ADD FOREIGN KEY($property1) references `$table1`(id) ON DELETE CASCADE;
+
 			";
 			
 			$this->adapter->exec ( $sql );
 			
-			$sql = "
-
-				ALTER TABLE " . $this->esc ( $table ) . "
-
-				ADD FOREIGN KEY($property2) references `$table2`(id) ON DELETE CASCADE
-
+			$sql = "
+
+				ALTER TABLE " . $this->esc ( $table ) . "
+
+				ADD FOREIGN KEY($property2) references `$table2`(id) ON DELETE CASCADE
+
 			";
 			
 			$this->adapter->exec ( $sql );
@@ -9173,8 +9173,8 @@ class RedBean_QueryWriter_MySQL extends RedBean_QueryWriter_AQueryWriter impleme
 			}
 		}
 		
-		$sql = "ALTER IGNORE TABLE $table
-
+		$sql = "ALTER IGNORE TABLE $table
+
                 ADD UNIQUE INDEX $name (" . implode ( ',', $columns ) . ")";
 		
 		$this->adapter->exec ( $sql );
@@ -9444,10 +9444,10 @@ class RedBean_QueryWriter_SQLiteT extends RedBean_QueryWriter_AQueryWriter imple
 		
 		foreach ( $tableMap ['keys'] as $key ) {
 			
-			$fkDef .= ", FOREIGN KEY(`{$key['from']}`)
-
-						 REFERENCES `{$key['table']}`(`{$key['to']}`)
-
+			$fkDef .= ", FOREIGN KEY(`{$key['from']}`)
+
+						 REFERENCES `{$key['table']}`(`{$key['to']}`)
+
 						 ON DELETE {$key['on_delete']} ON UPDATE {$key['on_update']}";
 		}
 		
@@ -9884,8 +9884,8 @@ class RedBean_QueryWriter_SQLiteT extends RedBean_QueryWriter_AQueryWriter imple
 	public function getTables() 
 
 	{
-		return $this->adapter->getCol ( "SELECT name FROM sqlite_master
-
+		return $this->adapter->getCol ( "SELECT name FROM sqlite_master
+
 			WHERE type='table' AND name!='sqlite_sequence';" );
 	}
 	
@@ -10196,44 +10196,44 @@ class RedBean_QueryWriter_PostgreSQL extends RedBean_QueryWriter_AQueryWriter im
 			
 			$fkCode = 'fk' . md5 ( $table . $property1 . $property2 );
 			
-			$sql = "SELECT c.oid, n.nspname, c.relname,
-
-				n2.nspname, c2.relname, cons.conname
-
-				FROM pg_class c
-
-				JOIN pg_namespace n ON n.oid = c.relnamespace
-
-				LEFT OUTER JOIN pg_constraint cons ON cons.conrelid = c.oid
-
-				LEFT OUTER JOIN pg_class c2 ON cons.confrelid = c2.oid
-
-				LEFT OUTER JOIN pg_namespace n2 ON n2.oid = c2.relnamespace
-
-				WHERE c.relkind = 'r'
-
-					AND n.nspname IN ('public')
-
-					AND (cons.contype = 'f' OR cons.contype IS NULL)
-
-					AND (  cons.conname = '{$fkCode}a'	OR  cons.conname = '{$fkCode}b' )
-
+			$sql = "SELECT c.oid, n.nspname, c.relname,
+
+				n2.nspname, c2.relname, cons.conname
+
+				FROM pg_class c
+
+				JOIN pg_namespace n ON n.oid = c.relnamespace
+
+				LEFT OUTER JOIN pg_constraint cons ON cons.conrelid = c.oid
+
+				LEFT OUTER JOIN pg_class c2 ON cons.confrelid = c2.oid
+
+				LEFT OUTER JOIN pg_namespace n2 ON n2.oid = c2.relnamespace
+
+				WHERE c.relkind = 'r'
+
+					AND n.nspname IN ('public')
+
+					AND (cons.contype = 'f' OR cons.contype IS NULL)
+
+					AND (  cons.conname = '{$fkCode}a'	OR  cons.conname = '{$fkCode}b' )
+
 			";
 			
 			$rows = $adapter->get ( $sql );
 			
 			if (! count ( $rows )) {
 				
-				$sql1 = "ALTER TABLE \"$table\" ADD CONSTRAINT
-
-					{$fkCode}a FOREIGN KEY ($property1)
-
+				$sql1 = "ALTER TABLE \"$table\" ADD CONSTRAINT
+
+					{$fkCode}a FOREIGN KEY ($property1)
+
 					REFERENCES \"$table1\" (id) ON DELETE CASCADE ";
 				
-				$sql2 = "ALTER TABLE \"$table\" ADD CONSTRAINT
-
-					{$fkCode}b FOREIGN KEY ($property2)
-
+				$sql2 = "ALTER TABLE \"$table\" ADD CONSTRAINT
+
+					{$fkCode}b FOREIGN KEY ($property2)
+
 					REFERENCES \"$table2\" (id) ON DELETE CASCADE ";
 				
 				$adapter->exec ( $sql1 );
@@ -10517,22 +10517,22 @@ class RedBean_QueryWriter_PostgreSQL extends RedBean_QueryWriter_AQueryWriter im
 			$columns [$k] = $this->esc ( $v );
 		}
 		
-		$r = $this->adapter->get ( "SELECT i.relname AS index_name
-
-			FROM pg_class t,pg_class i,pg_index ix,pg_attribute a
-
-			WHERE t.oid = ix.indrelid
-
-				AND i.oid = ix.indexrelid
-
-				AND a.attrelid = t.oid
-
-				AND a.attnum = ANY(ix.indkey)
-
-				AND t.relkind = 'r'
-
-				AND t.relname = '$table'
-
+		$r = $this->adapter->get ( "SELECT i.relname AS index_name
+
+			FROM pg_class t,pg_class i,pg_index ix,pg_attribute a
+
+			WHERE t.oid = ix.indrelid
+
+				AND i.oid = ix.indexrelid
+
+				AND a.attrelid = t.oid
+
+				AND a.attnum = ANY(ix.indkey)
+
+				AND t.relkind = 'r'
+
+				AND t.relname = '$table'
+
 			ORDER BY t.relname, i.relname;" );
 		
 		$name = "UQ_" . sha1 ( $table . implode ( ',', $columns ) );
@@ -10548,8 +10548,8 @@ class RedBean_QueryWriter_PostgreSQL extends RedBean_QueryWriter_AQueryWriter im
 			}
 		}
 		
-		$sql = "ALTER TABLE \"$table\"
-
+		$sql = "ALTER TABLE \"$table\"
+
                 ADD CONSTRAINT $name UNIQUE (" . implode ( ',', $columns ) . ")";
 		
 		$this->adapter->exec ( $sql );
@@ -10636,32 +10636,32 @@ class RedBean_QueryWriter_PostgreSQL extends RedBean_QueryWriter_AQueryWriter im
 			
 			$targetColumnNoQ = $this->esc ( $targetField, TRUE );
 			
-			$sql = "SELECT
-
-				tc.constraint_name, tc.table_name,
-
-				kcu.column_name, ccu.table_name AS foreign_table_name,
-
-				ccu.column_name AS foreign_column_name,rc.delete_rule
-
-				FROM information_schema.table_constraints AS tc
-
-				JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name
-
-				JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name
-
-				JOIN information_schema.referential_constraints AS rc ON ccu.constraint_name = rc.constraint_name
-
-				WHERE constraint_type = 'FOREIGN KEY' AND tc.table_catalog=current_database()
-
-					AND tc.table_name = '$tableNoQ'
-
-					AND ccu.table_name = '$targetTableNoQ'
-
-					AND kcu.column_name = '$columnNoQ'
-
-					AND ccu.column_name = '$targetColumnNoQ'
-
+			$sql = "SELECT
+
+				tc.constraint_name, tc.table_name,
+
+				kcu.column_name, ccu.table_name AS foreign_table_name,
+
+				ccu.column_name AS foreign_column_name,rc.delete_rule
+
+				FROM information_schema.table_constraints AS tc
+
+				JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name
+
+				JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name
+
+				JOIN information_schema.referential_constraints AS rc ON ccu.constraint_name = rc.constraint_name
+
+				WHERE constraint_type = 'FOREIGN KEY' AND tc.table_catalog=current_database()
+
+					AND tc.table_name = '$tableNoQ'
+
+					AND ccu.table_name = '$targetTableNoQ'
+
+					AND kcu.column_name = '$columnNoQ'
+
+					AND ccu.column_name = '$targetColumnNoQ'
+
 			";
 			
 			$row = $this->adapter->getRow ( $sql );
@@ -10695,10 +10695,10 @@ class RedBean_QueryWriter_PostgreSQL extends RedBean_QueryWriter_AQueryWriter im
 				
 				$delRule = ($isDep ? 'CASCADE' : 'SET NULL');
 				
-				$this->adapter->exec ( "ALTER TABLE  $table
-
-					ADD FOREIGN KEY (  $column ) REFERENCES  $targetTable (
-
+				$this->adapter->exec ( "ALTER TABLE  $table
+
+					ADD FOREIGN KEY (  $column ) REFERENCES  $targetTable (
+
 					$targetColumn) ON DELETE $delRule ON UPDATE SET NULL DEFERRABLE ;" );
 				
 				return TRUE;
@@ -29334,5 +29334,5 @@ class RedBean_DuplicationManager
 	}
 }
 class R extends RedBean_Facade {
-}
-
+}
+

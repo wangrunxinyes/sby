@@ -1611,4 +1611,4 @@ spl_autoload_register ( array (
 		'autoload' 
 ) );
 
-require (YII_PATH . '/base/interfaces.php');
+require (YII_PATH . '/base/interfaces.php');

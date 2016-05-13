@@ -25,4 +25,4 @@ class UserTest extends CDbTestCase
 		
 		$this->assertTrue ( $user->validatePassword ( 'newpwd' ) );
 	}
-}
+}
