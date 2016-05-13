@@ -54,6 +54,10 @@ class DefaultController extends Controller {
 		return $this->render('flog');
 	}
 	
+	public function actionBlog(){
+		return $this->render('blog');
+	}
+	
 	public function actionRefreshasset(){
 		return $this->render('refreshasset');
 	}

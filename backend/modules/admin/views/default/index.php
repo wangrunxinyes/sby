@@ -2,7 +2,11 @@
 use yii\helpers\Url;
 
 ?>
-
+<style>
+  .btn-lg{
+  margin-right: 10px;
+  }
+</style>
 <div class="admin-default-index">
 	<p>Functional Pannel</p>
 	<a class="btn btn-lg btn-success"
@@ -25,6 +29,8 @@ use yii\helpers\Url;
 	<p>Amdin Control Pannel</p>
 	<a class="btn btn-lg btn-success"
 		href="<?php echo Url::to(['default/test']); ?>">Test models</a> <a
+		class="btn btn-lg btn-success"
+		href="<?php echo Url::to(['default/blog']); ?>">Show Backend Log</a><a
 		class="btn btn-lg btn-success"
 		href="<?php echo Url::to(['default/flog']); ?>">Show Frontend Log</a>
 	<a class="btn btn-lg btn-success"
