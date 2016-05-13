@@ -14,7 +14,10 @@ return [
 				],
 				'weixin' => [ 
 						'class' => 'backend\modules\weixin\weixin' 
-				] 
+				],
+				'gridview' => [
+						'class' => 'kartik\grid\Module',
+				],
 		],
 		'components' => [ 
 				'user' => [ 

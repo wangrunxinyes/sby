@@ -11,12 +11,12 @@ use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
-use yii\web\Controller;
+use common\models\BasicController;
 
 /**
  * Site controller
  */
-class SiteController extends Controller {
+class SiteController extends BasicController {
 	/**
 	 * @inheritdoc
 	 */

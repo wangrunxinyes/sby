@@ -16,6 +16,10 @@ return [
 				'errorHandler' => [ 
 						'errorAction' => 'site/error' 
 				],
+				'request'=>[
+						'class' => 'common\components\Request',
+						'web'=> '/frontend/web'
+				],
 				'urlManager' => [ 
 						'enablePrettyUrl' => true,
 						'showScriptName' => false,

@@ -29,7 +29,7 @@ $asset = IndexAsset::register ( $this );
 							<a title="blog" href="#blog">Blog</a>
 						</li>
 						-->
-						<li><a title="contact" href="#contact">Contact</a></li>
+						<li style="display: none"><a title="contact" href="#contact">Contact</a></li>
 						<li><a href="<?php echo Url::to('tour/default')?>">More</a></li>
 					</ul>
 				</nav>
@@ -375,7 +375,7 @@ $asset = IndexAsset::register ( $this );
 		</div>
 	</div>
 </section>
-<section id="contact" class="section green">
+<section id="contact" class="section green" style="display:none;">
 	<div class="container">
 		<h4>Get in Touch</h4>
 		<p></p>

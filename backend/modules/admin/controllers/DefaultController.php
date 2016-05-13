@@ -27,7 +27,34 @@ class DefaultController extends Controller {
 		return $this->render('index');
 	}
 	
+	public function actionMessage(){
+		return $this->render('message');
+	}
+	
+	public function actionVisitor(){
+		return $this->render('visitor');
+	}
+	
+	public function actionVip(){
+		return $this->render('vipvisitor');
+	}
+	
+	public function actionIp(){
+		return $this->render('ip');
+	}
+	
 	public function actionTest(){
 		return $this->render('test');
+	}
+	
+	public function actionDeleteMsg($msg){
+	}
+	
+	public function actionFlog(){
+		return $this->render('flog');
+	}
+	
+	public function actionRefreshasset(){
+		return $this->render('refreshasset');
 	}
 }

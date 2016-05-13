@@ -1,7 +1,11 @@
 <?php
 $testArray = array (
 		'common\models\RedBean',
-		'common\models\Log'
+		'common\models\Log',
+		'common\units\project',
+		'common\models\Message',
+		'common\models\Visitor',
+		'common\models\VisitorLog'
 );
 
 $resultArray = array ();
