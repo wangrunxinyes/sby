@@ -12,24 +12,6 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
-  'kartik-v/yii2-krajee-base' => 
-  array (
-    'name' => 'kartik-v/yii2-krajee-base',
-    'version' => '1.8.2.0',
-    'alias' => 
-    array (
-      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
-    ),
-  ),
-  'kartik-v/yii2-grid' => 
-  array (
-    'name' => 'kartik-v/yii2-grid',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
-    ),
-  ),
   'yiisoft/yii2-swiftmailer' => 
   array (
     'name' => 'yiisoft/yii2-swiftmailer',
@@ -75,6 +57,43 @@ return array (
       '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
     ),
   ),
+  'mihaildev/yii2-ckeditor' => 
+  array (
+    'name' => 'mihaildev/yii2-ckeditor',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@mihaildev/ckeditor' => $vendorDir . '/mihaildev/yii2-ckeditor',
+    ),
+  ),
+  'funson86/yii2-blog' => 
+  array (
+    'name' => 'funson86/yii2-blog',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@funson86/blog' => $vendorDir . '/funson86/yii2-blog',
+    ),
+    'bootstrap' => 'funson86\\blog\\Bootstrap',
+  ),
+  'kartik-v/yii2-krajee-base' => 
+  array (
+    'name' => 'kartik-v/yii2-krajee-base',
+    'version' => '1.8.5.0',
+    'alias' => 
+    array (
+      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
+    ),
+  ),
+  'kartik-v/yii2-grid' => 
+  array (
+    'name' => 'kartik-v/yii2-grid',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
+    ),
+  ),
   'kartik-v/yii2-popover-x' => 
   array (
     'name' => 'kartik-v/yii2-popover-x',
@@ -101,24 +120,5 @@ return array (
     array (
       '@kartik/color' => $vendorDir . '/kartik-v/yii2-widget-colorinput',
     ),
-  ),
-  'mihaildev/yii2-ckeditor' => 
-  array (
-    'name' => 'mihaildev/yii2-ckeditor',
-    'version' => '1.0.1.0',
-    'alias' => 
-    array (
-      '@mihaildev/ckeditor' => $vendorDir . '/mihaildev/yii2-ckeditor',
-    ),
-  ),
-  'funson86/yii2-blog' => 
-  array (
-    'name' => 'funson86/yii2-blog',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@funson86/blog' => $vendorDir . '/funson86/yii2-blog',
-    ),
-    'bootstrap' => 'funson86\\blog\\Bootstrap',
   ),
 );
