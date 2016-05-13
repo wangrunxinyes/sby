@@ -32,4 +32,4 @@ class WebTestCase extends CWebTestCase
 		
 		$this->setBrowserUrl ( TEST_BASE_URL );
 	}
-}
+}
