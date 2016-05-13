@@ -5,10 +5,10 @@ use yii\helpers\Url;
 <BR>
 <BR>
 <a class="btn btn-lg btn-success"
-	href="<?php echo Url::to(['default/flog']); ?>">Refresh log</a>
+	href="<?php echo Url::to(['default/blog']); ?>">Refresh log</a>
 
 <a class="btn btn-lg btn-success"
-	href="<?php echo Url::to(['default/flog?delete=true']); ?>">Empty log</a>
+	href="<?php echo Url::to(['default/blog?delete=true']); ?>">Empty log</a>
 <BR>
 <BR>
 
